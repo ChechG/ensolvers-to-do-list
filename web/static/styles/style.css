@@ -1,0 +1,9 @@
+/* This is my stylesheet */
+
+.hide {
+    visibility: hidden;
+}
+
+.no_visible {
+    display: none;
+}
