@@ -62,31 +62,6 @@ $ ./open_todo_list
 
 One of the most crucial parts of the overall performance of the app is the database mapping implemented. To better understand and start using the app, a dump.sql file is used to populate the database when you run the script. Once you get the hang of it, the user can delete the default tasks and folders.
 
-
-### Screenshots
-
-User Login:
-![login](https://github.com/sfrechou/PlayerTrack/blob/main/dist/README_src/screen_login.png?raw=true)
-
-Player Daily Input:
-![login](https://github.com/sfrechou/PlayerTrack/blob/main/dist/README_src/screen_player_view.png?raw=true)
-
-Staff Dashboard:
-![login](https://github.com/sfrechou/PlayerTrack/blob/main/dist/README_src/screen_dash.png?raw=true)
-
-Staff View - Player Profile:
-![login](https://github.com/sfrechou/PlayerTrack/blob/main/dist/README_src/screen_profile.png?raw=true)
-
-Staff View - Advanced Stats:
-![login](https://github.com/sfrechou/PlayerTrack/blob/main/dist/README_src/screen_adv.png?raw=true)
-
-Staff View - Injuries:
-![login](https://github.com/sfrechou/PlayerTrack/blob/main/dist/README_src/screen_injury.png?raw=true)
-
-Staff View - Compare:
-![login](https://github.com/sfrechou/PlayerTrack/blob/main/dist/README_src/screen_compare.png?raw=true)
-
-
 ## Author
 
 Cecilia Giudice 
