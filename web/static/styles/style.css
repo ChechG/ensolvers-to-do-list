@@ -1,9 +1,62 @@
 /* This is my stylesheet */
-
+body {
+    padding: 100px;
+    background-image: linear-gradient(to bottom left, rgb(52,90,127), rgb(40,53,64));
+}
 .hide {
     visibility: hidden;
 }
 
 .no_visible {
     display: none;
+}
+.mar-top {
+    margin-top: 3px;
+}
+.mar-left {
+    margin-left: 10px;
+}
+li {
+    list-style-type:none;
+}
+
+.form-select {
+    width: 250px;
+    margin-right: 20px;
+}
+
+.flota {
+    float: left;
+    margin-top: 10px;
+}
+
+.white-border {
+    border: 1px white solid;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: cornsilk;
+}
+
+.flotar {
+    float: right;
+}
+
+.card-header {
+    height: 60px;
+    padding-top: 11px;
+    background-color: cornsilk;
+}
+
+.card-body {
+    background-color: rgb(230, 243, 255);
+}
+
+.btn-outline-light {
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
 }

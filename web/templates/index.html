@@ -11,50 +11,56 @@
     <link rel="stylesheet" type="text/css" href="../static/styles/style.css">
 </head>
 <body>
-<h1>This is my To-Do List</h1>
+    <header class="white-border">
+        <h1>This is my To-Do List</h1>
+    </header>
     <h2>{{ not_exist }}</h2>
-    <div class="row my-4">
+    <div class="row my-4 white-border">
         <div class="col-md-1 col-lg-1"></div>
         <div class="col-12 col-md-9 col-lg-9 mb-4 mb-lg-0">
-            <form id="add_task">
-                <label>Add new task</label></br>
-                <input type="text" placeholder="Add your new task" id="new_task">
-                <select id="select_folder" class="custom-select form-control">
+            <form id="add_task" class="form-inline">
+                <label><h2>Add new task</h2></label></br>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Add your new task</span>
+                    <input type="text" class="form-control" id="new_task">
+                </div>
+                <select id="select_folder" class="form-select flota">
                     <option selected>Select your folder</option>
                     {% for folder in list_f | sort %} 
                     <option value="{{ folder[1] }}" id="sel_folder_{{ folder[0] }}"> {{ folder[1] }}</option>
                     {% endfor %}
                 </select>
-                <button onclick="submit_add()" value="Save changes" id="save_new">Save task</button>
+                <button onclick="submit_add()" value="Save changes" id="save_new" class="btn btn-outline-success flota">Save task</button>
             </form>
         </div>
     </div>
-   <div class="row my-4">
+   <div class="row my-4 white-border">
         <div class="col-md-1 col-lg-1"></div>
         <div class="col-12 col-md-9 col-lg-9 mb-4 mb-lg-0">
             <form id="add_folder">
-                <label>Add new folder</label></br>
-                <input type="text" placeholder="Give the folder a name" id="new_folder">
-                <input type="submit" value="Save folder" id="save_folder">
+                <label><h2>Add new folder</h2></label></br>
+                <input type="text" placeholder="Give the folder a name" id="new_folder" class="form-control flota">
+                <input type="submit" value="Save folder" id="save_folder" class="btn btn-outline-success flota">
             </form>
         </div>
     </div>
-    <div class="row my-4">
+    <div class="row my-4 white-border">
+        <h2>Folders</h2>
         <div class="col-md-1 col-lg-1"></div>
         <div class="col-12 col-md-9 col-lg-9 mb-4 mb-lg-0">
             <ul>
             {% for fold in list_f %}
-                <li id="folder_{{ fold[0] }}"><button onclick="show_folder('{{ fold[1] }}')">{{ fold[1] }}</button></li>
+                <li id="folder_{{ fold[0] }}"><button class="btn btn-outline-light" onclick="show_folder('{{ fold[1] }}')">{{ fold[1] }}</button></li>
             {% endfor %}
             </ul>
         </div>
     </div>
     {% for key, folders in list_folders.items() %}
-        <div class="row my-4 no_visible" id="todo_{{ key }}">        
+        <div class="row my-4 no_visible white-border" id="todo_{{ key }}">        
             <div class="col-md-1 col-lg-1"></div>
-            <div class="col-12 col-md-9 col-lg-9 mb-4 mb-lg-0">
+            <div class="col-12 col-md-9 col-lg-9 mb-lg-0">
                 <div class="todo_list">
-                    <h5 class="card-header">{{ key }} <button id="delete_{{ key }}" onclick="delete_folder('{{ folders[0][0] }}')">Delete</button></h5>
+                    <h3 class="card-header">{{ key }} <button class="btn btn-outline-danger flotar" id="delete_{{ key }}" onclick="delete_folder('{{ key }}')">Delete folder</button></h3>
                     <div class="card-body">
                         <table class="display dataTable table" role="grid">
                             <thead class="thead-dark">
@@ -70,9 +76,9 @@
                             <tr>
                                 <td><input type="checkbox" id="{{ folder[3] }}_{{ folder[0] }}" class="edit form-check-input" value="{{ folder[0] }}" name="edit"></td>
                                 <td>{{ folder[1] }}</td>
-                                <td><button onclick="delete_task('{{ folder[0] }}')">Delete</button></td>
-                                <td><button onclick="display_edit('edit{{ folder[0] }}')">Edit</button></td>
-                                <td id="edit{{ folder[0] }}" class="hide"><input type="text" id="new_edit{{ folder[0] }}"><button onclick="edit_task('{{ folder[0]}}')">Save</button></td>
+                                <td><button class="btn btn-outline-danger" onclick="delete_task('{{ folder[0] }}')">Delete</button></td>
+                                <td><button class="btn btn-outline-primary" onclick="display_edit('edit{{ folder[0] }}')">Edit</button></td>
+                                <td id="edit{{ folder[0] }}" class="hide"><input type="text" id="new_edit{{ folder[0] }}" class="mar-top"><button onclick="edit_task('{{ folder[0]}}')" class="btn btn-outline-success mar-left">Save</button></td>
                             </tr>
                             {% endfor %}
                         </table>

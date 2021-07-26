@@ -62,7 +62,6 @@ function display_edit(id) {
 }
 
 function edit_task(id_task){
-    console.log(id_task);
     var post_url = '/submit_edit';
     var new_task = "#new_edit" + id_task;
     $.ajax({

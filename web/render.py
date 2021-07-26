@@ -50,7 +50,7 @@ def ini():
             list_tasks = []
             for task in list_i:
                 if task[2] == k[0]:
-                    task[2] = k[1]
+                    task.append(k[1])
                     list_tasks.append(task)
             k[1] = k[1].replace(" ", "_")
             dic_folders[k[1]] = list_tasks
@@ -225,6 +225,17 @@ def submit_edit():
 def delete_folder():
     if request.method == 'POST':
         folder = request.form['folder_id']
+        folder = folder.replace("_", " ")
+        folders = db.cursor()
+        folders.execute("SELECT id FROM folders WHERE name='{}'".format(folder))
+        folder_id = folders.fetchone()
+        folder_id = folder_id[0]
+        lists = db.cursor()
+        lists.execute("DELETE FROM lists WHERE id_folder={}".format(folder_id))
+        db.commit()
+        folder_name = db.cursor()
+        folder_name.execute("DELETE FROM folders WHERE name='{}'".format(folder))
+        db.commit()
         items_list = db.cursor()
         items_list.execute("SELECT * FROM lists")
         items = items_list.fetchall()
