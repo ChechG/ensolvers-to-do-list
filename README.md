@@ -62,6 +62,8 @@ $ ./open_todo_list
 
 One of the most crucial parts of the overall performance of the app is the database mapping implemented. To better understand and start using the app, a dump.sql file is used to populate the database when you run the script. Once you get the hang of it, the user can delete the default tasks and folders.
 
+Use your root password to dump the dump file in the mysql database.
+
 ## Author
 
 Cecilia Giudice 
