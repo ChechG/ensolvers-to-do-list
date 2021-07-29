@@ -1,4 +1,5 @@
 # To-Do list APP
+## React version
 
 This is a simple web application that allows you to create to-do items and folders to
 group them. The development was divided in two phases:
