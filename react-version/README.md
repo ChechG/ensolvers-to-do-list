@@ -28,32 +28,24 @@ In order to download it and run it, you will need:
         - In Schemas section, refresh
     You've got now your database configured.
 
-* Terminal
-You need npm installed.
+* Terminal 1
+You need npm previously installed.
+[this](https://nodejs.org/en/)
 ```
-$ sudo apt-get update
-$ sudo apt-get install python3.6
-```
-
-* Flask - Python module, web framework
-```
-$ sudo pip3 install Flask
-```
-
-* Jinja2
-```
-$ sudo pip3 install Jinja2
+$ cd /react-version/client
+$ npm install express body-parser mysql nodemon cors
+$ npm install
+$ npm i axios
+$ npm start
 ```
 
-* MySQL
+* Terminal 2
 ```
-$ echo 'deb http://repo.mysql.com/apt/ubuntu/ trusty mysql-5.7-dmr' | sudo tee -a /etc/apt/sources.list
-$ sudo apt-get update
-$ sudo apt-get install mysql-server-5.7
+$ cd /react-version/server
+$ npm run devStart
 ```
-* JavaScript 3.2.1
 
-* Bootstrap
+In your default browser refresh so that the database is updated.
 
 ### Installing
 
@@ -67,9 +59,9 @@ $ ./open_todo_list
 
 ## Database
 
-One of the most crucial parts of the overall performance of the app is the database mapping implemented. To better understand and start using the app, a dump.sql file is used to populate the database when you run the script. Once you get the hang of it, the user can delete the default tasks and folders.
+One of the most crucial parts of the overall performance of the app is the database mapping implemented. To better understand and start using the app, a dump.sql file is used to populate the database. Once you get the hang of it, the user can delete the default tasks.
 
-Use your root password to dump the dump file in the mysql database.
+Use your root password to dump the dump file in the mysql database (MySQL Workbench).
 
 ## Author
 
