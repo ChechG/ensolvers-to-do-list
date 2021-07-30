@@ -5,25 +5,13 @@ GRANT ALL PRIVILEGES ON `todo_db`.* TO `new_user`@`localhost`;
 FLUSH PRIVILEGES;
 
 USE todo_db;
-DROP TABLE IF EXISTS `folders`;
-CREATE TABLE `folders` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(128) NOT NULL,
-  PRIMARY KEY (`id`)
-);
-
 DROP TABLE IF EXISTS `lists`;
 CREATE TABLE `lists` (
   `id` int NOT NULL AUTO_INCREMENT,
   `todo` varchar(128) NOT NULL,
-  `id_folder` int NOT NULL,
   PRIMARY KEY (`id`)
 );
 
-LOCK TABLES `folders` WRITE;
-INSERT INTO `folders` (name) VALUES ('Work'), ('Daily Tasks');
-UNLOCK TABLES;
-
 LOCK TABLES `lists` WRITE;
-INSERT INTO `lists` (todo, id_folder) VALUES ('Meeting', 1), ('Eat', 2), ('Fill forms', 1), ('Take out the trash', 2), ('Clean your room', 2);
+INSERT INTO `lists` (todo) VALUES ('Meeting'), ('Eat'), ('Fill forms'), ('Take out the trash'), ('Clean your room');
 UNLOCK TABLES;

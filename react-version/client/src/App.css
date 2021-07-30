@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  padding: 100px;
+  background-image: linear-gradient(to bottom left, rgb(52,90,127), rgb(40,53,64));
+  color: whitesmoke;
+}
+
+.App {
+  text-align: center;
+}
+
+.add_task_section, .add_folder_section, .folder_section, .table_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid white;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.add_task_section input, .add_folder_section input {
+  width: 300px;
+  height: 30px;
+  margin: 10px;
+}
+
+.form-select {
+  width: 300px;
+  height: 30px;
+  margin: 10px;
+}
+
+.add_task_section button{
+  width: 300px;
+  height: 30px;
+  margin: 10px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.btn_folder {
+  height: 30px;
+  margin: 10px;
+}
